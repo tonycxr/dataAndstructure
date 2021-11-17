@@ -2,7 +2,7 @@ package Stack;
 
 public class Calculator {
     public static void main(String[] args) {
-        String str = "7-6-1-8";
+        String str = "76*50-611*61+166*16-8*18";
         CalculatorByStack cal1 = new CalculatorByStack(10);
         CalculatorByStack cal2 = new CalculatorByStack(10);
         int index = 0;
