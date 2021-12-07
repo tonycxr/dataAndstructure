@@ -1,6 +1,6 @@
 package Tree.Test;
 
-import Tree.BinaryTrees.BinaryTree;
+import Tree.Trees.BinaryTree;
 import Tree.Node.HeroNode;
 
 public class TestBinaryTree {

@@ -1,6 +1,6 @@
 package Tree.Test;
 
-import static Tree.BinaryTrees.HuffmanTree.createHuffman;
+import static Tree.Trees.HuffmanTree.createHuffman;
 
 public class TestHuffman {
     public static void main(String[] args) {

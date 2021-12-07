@@ -1,4 +1,4 @@
-package Tree.BinaryTrees;
+package Tree.Trees;
 
 public class ArrBinaryTree {
     private int[] arr;

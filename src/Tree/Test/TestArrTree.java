@@ -1,6 +1,6 @@
 package Tree.Test;
 
-import Tree.BinaryTrees.ArrBinaryTree;
+import Tree.Trees.ArrBinaryTree;
 
 public class TestArrTree {
     public static void main(String[] args) {

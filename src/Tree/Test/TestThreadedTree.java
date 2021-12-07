@@ -1,6 +1,6 @@
 package Tree.Test;
 
-import Tree.BinaryTrees.ThreadedBinaryTree;
+import Tree.Trees.ThreadedBinaryTree;
 import Tree.Node.HeroNode;
 
 public class TestThreadedTree {
