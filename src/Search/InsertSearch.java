@@ -4,30 +4,31 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-public class BinarySearch {
+public class InsertSearch {
     public static void main(String[] args) {
-//        int[] arr = new int[]{13,13,13,13,13,13,13,29,36};
-//        System.out.println(BinarySearch1(arr,0,arr.length-1,36));
+//        int[] arr = new int[]{1,3,5,8,13,13,13,29,36};
+//        System.out.println(InsertSearch1(arr,0,arr.length-1,36));
 //        System.out.println(BinarySearch2(arr,0,arr.length-1,13));
         int[] arr = new int[10000000];
         for(int i=0;i<arr.length;i++){
             arr[i] = i+1;
         }
         System.out.println(new Date());
-        System.out.println(BinarySearch1(arr,0,arr.length-1,36));
+        System.out.println(InsertSearch1(arr,0,arr.length-1,36));
         System.out.println(new Date());
     }
 
-    public static int BinarySearch1(int[] arr,int left,int right,int toFind){
-        if(left>right){
+    public static int InsertSearch1(int[] arr,int left,int right,int toFind){
+        if(left>right || toFind<arr[0] || toFind>arr[arr.length-1]){
             return -1;
         }
-        int mid = (left+right) / 2;
+        //上述条件是必须而不是可有可无，否则mid可能会越界
+        int mid = left+(right-left)*(toFind-arr[left])/(arr[right]-arr[left]);
         int arrMid = arr[mid];
         if(toFind>arrMid){
-            return BinarySearch1(arr,mid+1,right,toFind);
+            return InsertSearch1(arr,mid+1,right,toFind);
         }else if(toFind<arrMid){
-            return BinarySearch1(arr,left,mid-1,toFind);
+            return InsertSearch1(arr,left,mid-1,toFind);
         }else {
             return mid;
         }
