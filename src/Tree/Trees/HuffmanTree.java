@@ -25,4 +25,12 @@ public class HuffmanTree {
         }
         return nodes.get(0);
     }
+
+    public static void preOrder(Node root){
+        if(root!=null){
+            root.preOrder();
+        }else{
+            System.out.println("空的赫夫曼树");
+        }
+    }
 }

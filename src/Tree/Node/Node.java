@@ -3,6 +3,17 @@ package Tree.Node;
 public class Node implements Comparable<Node>{
     private int value;
     private Node left;
+    private Node right;
+
+    public void preOrder(){
+        System.out.println(this);
+        if(this.left!=null){
+            this.left.preOrder();
+        }
+        if(this.right!=null){
+            this.right.preOrder();
+        }
+    }
 
     public int getValue() {
         return value;
@@ -28,7 +39,6 @@ public class Node implements Comparable<Node>{
         this.right = right;
     }
 
-    private Node right;
 
     public Node(int value){
         this.value = value;
